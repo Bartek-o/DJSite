@@ -1,0 +1,230 @@
+﻿nav {
+    position: absolute;
+}
+
+.bg-blue {
+    background-color: #3a6cdf;
+}
+
+.col-white {
+    color: white;
+    transition: color 0.2s linear;
+}
+
+.col-white:hover,
+.col-white:focus {
+    color: gold;
+}
+
+#djsite > img {
+    -webkit-transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+}
+
+#djsite:hover > img {
+    transform: rotate(-60deg);
+}
+
+.span-navbar {
+    position: absolute;
+    background: transparent;
+    height: 3px;
+    transition: all 0.2s linear;
+    border-radius: 20px;
+}
+
+#span-djsite {
+    width: 70px;
+    top: 49px;
+    left: 73px;
+}
+
+#navbar-list > li:nth-child(1) > span {
+    width: 51.5px;
+    top: 52px;
+    left: 191px;
+}
+
+#navbar-list > li:nth-child(2) > span {
+    width: 43.5px;
+    top: 52px;
+    left: 259px;
+}
+
+#navbar-list > li:nth-child(3) > span {
+    width: 49px;
+    top: 52px;
+    left: 319px;
+}
+
+#navbar-list > li:nth-child(4) > span {
+    width: 69px;
+    top: 52px;
+    left: 384px;
+}
+
+#navbar-list > li:nth-child(5) > span {
+    width: 55px;
+    top: 52px;
+    left: 468.5px;
+}
+
+#djsite:hover #span-djsite {
+    top: 44px;
+    background: gold;
+}
+
+#navbar-list > li:hover > span {
+    top: 47px;
+    background: gold;
+}
+
+#navbar-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-basis: auto;
+    margin-left: 30px;
+}
+
+#navbar-container-mobile {
+    display: none;
+    flex-grow: 1;
+    align-items: center;
+    flex-basis: auto;
+    margin-left: 30px;
+}
+
+#navbar-list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+#navbar-list-mobile {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: #4f79df;
+    width: 100%;
+    left: 0;
+    z-index: 1029;
+    top: -134px;
+}
+
+#navbar-list-mobile > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 78px;
+}
+
+#navbar-list > li > a {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+#btn-toggle-nav {
+    display: none;
+}
+
+.btn-nav-icon {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-icon:hover {
+    background: radial-gradient(#ffffff00 45%, gold 65%, #ffffff00 79%);
+}
+
+@media (max-width: 800px) {
+    #navbar-container {
+        display: none;
+    }
+
+    #navbar-container-mobile {
+        display: flex;
+    }
+
+    .btn-nav-icon {
+        display: none;
+    }
+
+    #btn-toggle-nav {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    #btn-toggle-nav span {
+        background: white;
+        display: block;
+        width: 30px;
+        height: 4px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+
+    #btn-toggle-nav span:nth-child(2) {
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+
+    #btn-toggle-nav.open span:nth-child(1), #btn-toggle-nav.open span:nth-child(3) {
+        transform: translate(0px, 0px) rotate(-45deg) scalex(1.1);
+        margin: 0;
+    }
+
+    #btn-toggle-nav.open span:nth-child(2) {
+        transform: translate(20px, -2px) scalex(0);
+        background-color: transparent;
+        height: 0px;
+        margin: 0;
+    }
+
+    #btn-toggle-nav.open span:nth-child(3) {
+        transform: translate(0px, -4px) rotate(45deg) scalex(1.1);
+    }
+}
+
+@media (min-width: 1300px) {
+    nav {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    #span-djsite {
+        left: 173px;
+    }
+
+    #navbar-list > li:nth-child(1) > span {
+        left: 291px;
+    }
+
+    #navbar-list > li:nth-child(2) > span {
+        left: 359px;
+    }
+
+    #navbar-list > li:nth-child(3) > span {
+        left: 419px;
+    }
+
+    #navbar-list > li:nth-child(4) > span {
+        left: 484px;
+    }
+
+    #navbar-list > li:nth-child(5) > span {
+        left: 568.5px;
+    }
+}
