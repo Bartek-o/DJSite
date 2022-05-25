@@ -2,3 +2,33 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#DJSite {
+    background: url(../assets/dj-main.jpg);
+    height: 100vh;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+#DJSite > p {
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    width: 565px;
+    color: white;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+@media (min-width: 1300px) {
+    #DJSite > p {
+        padding-left: 100px;
+        left: 1vw;
+    }
+}
