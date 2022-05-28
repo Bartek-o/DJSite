@@ -1,7 +1,33 @@
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddLocalization();
+
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[]
+    {
+        new CultureInfo("pl"),
+        new CultureInfo("en")
+    };
+
+    options.DefaultRequestCulture = new RequestCulture("pl");
+
+    options.SupportedCultures = supportedCultures;
+
+    options.SupportedUICultures = supportedCultures;
+
+    options.RequestCultureProviders = new List<IRequestCultureProvider>
+    {
+        new QueryStringRequestCultureProvider(),
+        new CookieRequestCultureProvider()
+    };
+});
 
 var app = builder.Build();
 
@@ -13,7 +39,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseRequestLocalization();
+
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();

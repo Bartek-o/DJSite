@@ -1,4 +1,6 @@
-﻿@{
+﻿@inject IStringLocalizer<Language> Localizer
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -8,11 +10,15 @@
 *@
 
 <section id="DJSite">
-    <p>
-        Dj na Twoją imprezę!
-    </p>
+    <p>@Localizer["txt_top"]</p>
 </section>
+<div id="filler">
+    <p>
+        @Localizer["professionalism"]
+        <img src="~/assets/headphones-g8a.png" alt=""/>
+    </p>
+</div>
 <section id="about-me">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore maxime magni quod, facere ipsa officia sunt non quae vitae perspiciatis? Modi, sequi deserunt eos deleniti eveniet labore nesciunt minus suscipit?
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero vel nihil explicabo dolor cumque voluptatem incidunt asperiores vitae modi ipsa totam eveniet, quas praesentium accusantium amet id corporis illo reiciendis!
+    <p>@Localizer["hi"]</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Localizer["description_of_me"]</p>
 </section>

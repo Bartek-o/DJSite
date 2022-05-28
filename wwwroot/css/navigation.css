@@ -31,6 +31,7 @@
     height: 3px;
     transition: all 0.2s linear;
     border-radius: 20px;
+    background-clip: content-box;
 }
 
 #span-djsite {
@@ -39,34 +40,15 @@
     left: 73px;
 }
 
-#navbar-list > li:nth-child(1) > span {
-    width: 51.5px;
-    top: 52px;
-    left: 191px;
+#navbar-list > li {
+    position: relative;
 }
 
-#navbar-list > li:nth-child(2) > span {
-    width: 43.5px;
-    top: 52px;
-    left: 259px;
-}
-
-#navbar-list > li:nth-child(3) > span {
-    width: 49px;
-    top: 52px;
-    left: 319px;
-}
-
-#navbar-list > li:nth-child(4) > span {
-    width: 69px;
-    top: 52px;
-    left: 384px;
-}
-
-#navbar-list > li:nth-child(5) > span {
-    width: 55px;
-    top: 52px;
-    left: 468.5px;
+#navbar-list > li > span {
+    width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    top: 93%;
 }
 
 #djsite:hover #span-djsite {
@@ -75,8 +57,9 @@
 }
 
 #navbar-list > li:hover > span {
-    top: 47px;
+    top: 83%;
     background: gold;
+    background-clip: content-box;
 }
 
 #navbar-container {
@@ -206,25 +189,5 @@
 
     #span-djsite {
         left: 173px;
-    }
-
-    #navbar-list > li:nth-child(1) > span {
-        left: 291px;
-    }
-
-    #navbar-list > li:nth-child(2) > span {
-        left: 359px;
-    }
-
-    #navbar-list > li:nth-child(3) > span {
-        left: 419px;
-    }
-
-    #navbar-list > li:nth-child(4) > span {
-        left: 484px;
-    }
-
-    #navbar-list > li:nth-child(5) > span {
-        left: 568.5px;
     }
 }

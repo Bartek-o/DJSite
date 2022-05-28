@@ -24,7 +24,9 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - DJSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - DJSite - 
+            @Html.ActionLink("English", "ChangeLanguage", "Home", new {language = "en"})
+            @Html.ActionLink("Polski", "ChangeLanguage", "Home", new {language = "pl"})
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

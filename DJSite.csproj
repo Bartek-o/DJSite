@@ -10,4 +10,56 @@
     <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\assets\audience.jpg" />
+    <None Include="wwwroot\assets\bar.jpg" />
+    <None Include="wwwroot\assets\concert.jpg" />
+    <None Include="wwwroot\assets\console.jpg" />
+    <None Include="wwwroot\assets\dj-g1.png" />
+    <None Include="wwwroot\assets\dj-g4.png" />
+    <None Include="wwwroot\assets\dj-main.jpg" />
+    <None Include="wwwroot\assets\dj-party-music-black.svg" />
+    <None Include="wwwroot\assets\dj-party-music-white.svg" />
+    <None Include="wwwroot\assets\email-round-line-black.svg" />
+    <None Include="wwwroot\assets\email-round-line-white.svg" />
+    <None Include="wwwroot\assets\facebook-round-line-black.svg" />
+    <None Include="wwwroot\assets\facebook-round-line-white.svg" />
+    <None Include="wwwroot\assets\headphones.jpg" />
+    <None Include="wwwroot\assets\instagram-round-line-black.svg" />
+    <None Include="wwwroot\assets\instagram-round-line-white.svg" />
+    <None Include="wwwroot\assets\lightshow.jpg" />
+    <None Include="wwwroot\assets\love.jpg" />
+    <None Include="wwwroot\assets\menu-bar-black.svg" />
+    <None Include="wwwroot\assets\menu-bar-white.svg" />
+    <None Include="wwwroot\assets\nightclub.jpg" />
+    <None Include="wwwroot\assets\party-people.jpg" />
+    <None Include="wwwroot\assets\people.jpg" />
+    <None Include="wwwroot\assets\speakers.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Language.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Language.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
