@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/navigation.css" asp-append-version="true" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/tui-calendar.css" />
 </head>
 <body>
     <header>
@@ -25,14 +23,19 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - DJSite - 
+            <div style="float: right;">
             @Html.ActionLink("English", "ChangeLanguage", "Home", new {language = "en"})
             @Html.ActionLink("Polski", "ChangeLanguage", "Home", new {language = "pl"})
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/navigation.js" asp-append-version="true"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
+    <script src="~/js/tui-calendar.js"></script>
+    <script src="~/js/calendar.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -135,11 +135,35 @@
   <data name="hi" xml:space="preserve">
     <value>Cześć</value>
   </data>
+  <data name="illuminated" xml:space="preserve">
+    <value>W swojej ofercie posiadam na wynajem ozdobne litery, cyfry, znaki oraz całe napisy, wykonane w różnych stylach. Duże, świecące znaki świetnie ozdobią i rozświetlą parkiet, strefę wypoczynku czy ogród i będą oryginalnym tłem do zdjęć.</value>
+  </data>
+  <data name="illuminated_title" xml:space="preserve">
+    <value>Podświetlane napisy</value>
+  </data>
+  <data name="lightshow" xml:space="preserve">
+    <value>Oprócz ozdobnych napisów, w mojej ofercie znajduje się także ozdabianie sali światłem. Posiadam przeróżne lampy, lasery, taśmy LED oraz halogeny. Dzięki takiemu sprzętowi jestem w stanie ozdobić salę światłem na każdą okazję oraz dzięki światłu wytworzyć pożądany klimat.</value>
+  </data>
+  <data name="lightshow_title" xml:space="preserve">
+    <value>Zdobienie światłem</value>
+  </data>
+  <data name="my_offer" xml:space="preserve">
+    <value>Moja oferta</value>
+  </data>
   <data name="offer" xml:space="preserve">
     <value>Oferta</value>
   </data>
+  <data name="party" xml:space="preserve">
+    <value>DJ Site to kompleksowa obsługa muzyczno – oświetleniowa. Zadbam o waszą imprezę w każdym calu, perfekcyjnie dobiorę repertuar muzyczny, zintegruję gości, poprowadzę konkursy oraz gry. Pozytywnym nastawieniem stworzę super klimat.</value>
+  </data>
+  <data name="party_title" xml:space="preserve">
+    <value>DJ na imprezę</value>
+  </data>
   <data name="professionalism" xml:space="preserve">
     <value>DJ Site to profesjonalizm!</value>
+  </data>
+  <data name="txt_gallery" xml:space="preserve">
+    <value>Kilka fotek z mojej pracy</value>
   </data>
   <data name="txt_top" xml:space="preserve">
     <value>DJ na twoją imprezę!</value>

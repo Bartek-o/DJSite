@@ -135,11 +135,35 @@
   <data name="hi" xml:space="preserve">
     <value>Hi</value>
   </data>
+  <data name="illuminated" xml:space="preserve">
+    <value>In my offer I have decorative letters, numbers, signs and whole inscriptions for rent, made in various styles. Large, luminous signs will perfectly decorate and illuminate the dance floor, rest zone or garden, and will be an original background for photos.</value>
+  </data>
+  <data name="illuminated_title" xml:space="preserve">
+    <value>Illuminated inscriptions</value>
+  </data>
+  <data name="lightshow" xml:space="preserve">
+    <value>In addition to decorative inscriptions, my offer also includes decorating the room with light. I have various lamps, lasers, LED strips and halogen lights. Thanks to such equipment, I am able to decorate the room with light for any occasion and, thanks to the light, create the desired atmosphere.</value>
+  </data>
+  <data name="lightshow_title" xml:space="preserve">
+    <value>Decorating with light</value>
+  </data>
+  <data name="my_offer" xml:space="preserve">
+    <value>My offer</value>
+  </data>
   <data name="offer" xml:space="preserve">
     <value>Offer</value>
   </data>
+  <data name="party" xml:space="preserve">
+    <value>DJ Site is a comprehensive music and lighting service. I will take care of your party in every way, I will choose the perfect music repertoire, I will integrate the guests, I will conduct competitions and games. I will create a great atmosphere with a positive attitude.</value>
+  </data>
+  <data name="party_title" xml:space="preserve">
+    <value>DJ for the party</value>
+  </data>
   <data name="professionalism" xml:space="preserve">
     <value>DJ Site is professionalism!</value>
+  </data>
+  <data name="txt_gallery" xml:space="preserve">
+    <value>A few photos from my work</value>
   </data>
   <data name="txt_top" xml:space="preserve">
     <value>DJ for your party!</value>

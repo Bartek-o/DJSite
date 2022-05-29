@@ -115,6 +115,51 @@ namespace DJSite.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu In my offer I have decorative letters, numbers, signs and whole inscriptions for rent, made in various styles. Large, luminous signs will perfectly decorate and illuminate the dance floor, rest zone or garden, and will be an original background for photos..
+        /// </summary>
+        public static string illuminated {
+            get {
+                return ResourceManager.GetString("illuminated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Illuminated inscriptions.
+        /// </summary>
+        public static string illuminated_title {
+            get {
+                return ResourceManager.GetString("illuminated_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu In addition to decorative inscriptions, my offer also includes decorating the room with light. I have various lamps, lasers, LED strips and halogen lights. Thanks to such equipment, I am able to decorate the room with light for any occasion and, thanks to the light, create the desired atmosphere..
+        /// </summary>
+        public static string lightshow {
+            get {
+                return ResourceManager.GetString("lightshow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Decorating with light.
+        /// </summary>
+        public static string lightshow_title {
+            get {
+                return ResourceManager.GetString("lightshow_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu My offer.
+        /// </summary>
+        public static string my_offer {
+            get {
+                return ResourceManager.GetString("my_offer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Offer.
         /// </summary>
         public static string offer {
@@ -124,11 +169,38 @@ namespace DJSite.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu DJ Site is a comprehensive music and lighting service. I will take care of your party in every way, I will choose the perfect music repertoire, I will integrate the guests, I will conduct competitions and games. I will create a great atmosphere with a positive attitude..
+        /// </summary>
+        public static string party {
+            get {
+                return ResourceManager.GetString("party", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu DJ for the party.
+        /// </summary>
+        public static string party_title {
+            get {
+                return ResourceManager.GetString("party_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu DJ Site is professionalism!.
         /// </summary>
         public static string professionalism {
             get {
                 return ResourceManager.GetString("professionalism", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu A few photos from my work.
+        /// </summary>
+        public static string txt_gallery {
+            get {
+                return ResourceManager.GetString("txt_gallery", resourceCulture);
             }
         }
         

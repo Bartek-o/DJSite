@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    overflow: overlay;
-    scroll-padding-top: 90px;
+    overflow: overlay; /* dla chrome */
+    /*overflow: auto;*/
 }
 
 html::-webkit-scrollbar {
@@ -28,6 +28,24 @@ main {
     padding-right: 0 !important;
 }
 
+footer {
+    background: #3a6cdf;
+    color: white;
+}
+
+footer > div {
+    background: #3a6cdf;
+    color: white;
+}
+
+footer > div > div > a {
+    color: white;
+}
+
+footer > div > div > a:hover {
+    color: gold;
+}
+
 /*Section DJSite*/
 #DJSite {
     background: url(../assets/dj-main.jpg) no-repeat center center;
@@ -45,28 +63,37 @@ main {
     font-weight: 900;
 }
 
-/*Section filler*/
-#filler {
+/*Section fillers*/
+#filler1 {
     background: linear-gradient(135deg, #151517 45%, #3a6cdf 80%),#3a6cdf;
-    background-size: cover;
-    height: 10vh;
 }
 
-#filler > p {
+#filler2 {
+    background: linear-gradient(135deg, #151517 15%, #3a6cdf 80%),#3a6cdf;
+}
+
+.fill {
+    background: linear-gradient(90deg, #15151780 10%, #3a6cdf 30%, #3a6cdf 70%, #15151780 90%), #3a6cdf;
+    background-size: cover;
+    height: 80px;
+}
+
+.fill > p {
     color: white;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 33px;
     text-align: center;
     text-decoration: underline;
     text-underline-position: under;
-    height: 5vh;
-    margin-top: 2vh;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-#filler > p > img {
+.fill > p > img {
     position: absolute;
-    height: 9vh;
-    top: 100.5vh;
+    height: 70px;
+    top: 100.8vh;
     margin-left: 40px;
 }
 
@@ -96,10 +123,117 @@ main {
     font-size: 20px;
 }
 
+/*Section offer*/
+#offer > div {
+    position: relative;
+}
+
+#offer > div > div {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#offer > div:nth-child(1) > div {
+    background: #171b25;
+}
+
+#offer > div:nth-child(2) > div {
+    background: #2b488c;
+}
+
+#offer > div:nth-child(3) > div {
+    background: #3a6cdf;
+}
+
+#offer > div > img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.offer-col > p {
+    padding: 0 35px 0 35px;
+}
+
+.offer-col > p:nth-child(3) {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.offer-col > p:nth-child(4) {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+/*Section gallery*/
+#gallery > div > div > img {
+    height: 300px;
+    width: 100%;
+    object-fit: fill;
+    object-position: center center;
+}
+
+/*Section calendar*/
+#calendar > * {
+    height: 800px;
+    margin: 50px;
+}
+
+.tui-full-calendar-month-dayname-item {
+    overflow-y: hidden;
+}
+
+.tui-full-calendar-month-week-item {
+    overflow-y: hidden;
+}
+
+.tui-full-calendar-month-guide-block {
+    overflow-y: hidden;
+}
+
+/*Section contact*/
+#contact {
+    width: 100%;
+    padding: 50px 0 50px 0;
+    margin: 0;
+}
+
+.contact-col {
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.contact-col > img {
+    height: 250px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.contact-col > p {
+    padding-top: 20px;
+    text-align: center;
+}
+
 /*Section mobile*/
 @media (min-width: 1300px) {
     #DJSite > p {
         padding-left: 100px;
         left: 1vw;
+    }
+}
+
+@media (max-width: 991px) {
+    #offer > div > div {
+        background: white !important;
     }
 }
