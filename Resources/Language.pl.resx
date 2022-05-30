@@ -126,8 +126,17 @@
   <data name="contact" xml:space="preserve">
     <value>Kontakt</value>
   </data>
+  <data name="Deadline busy" xml:space="preserve">
+    <value>Zajęty termin</value>
+  </data>
   <data name="description_of_me" xml:space="preserve">
     <value>Mam na imię Bartek, od jakiegoś czasu zawodowo zajmuję się prowadzeniem imprez pod pseudonimem DJ Site. Oprócz prowadzenia imprez, zajmuję się także ozdabianiem sali światłem. Pracuję na najlepszym sprzęcie, nie uznaje zamienników i półśrodków. Jeśli szukacie DJ-a na imprezę, który zapewni odpowiedni klimat do zabawy oraz jest elastyczny w kwestii gatunków muzycznych, to trafiliście idealnie.</value>
+  </data>
+  <data name="Free term" xml:space="preserve">
+    <value>Wolny termin</value>
+  </data>
+  <data name="Fri" xml:space="preserve">
+    <value>Pt</value>
   </data>
   <data name="gallery" xml:space="preserve">
     <value>Galeria</value>
@@ -147,6 +156,9 @@
   <data name="lightshow_title" xml:space="preserve">
     <value>Zdobienie światłem</value>
   </data>
+  <data name="Mon" xml:space="preserve">
+    <value>Pon</value>
+  </data>
   <data name="my_offer" xml:space="preserve">
     <value>Moja oferta</value>
   </data>
@@ -162,10 +174,28 @@
   <data name="professionalism" xml:space="preserve">
     <value>DJ Site to profesjonalizm!</value>
   </data>
+  <data name="Sat" xml:space="preserve">
+    <value>Sob</value>
+  </data>
+  <data name="Sun" xml:space="preserve">
+    <value>Niedz</value>
+  </data>
+  <data name="Thu" xml:space="preserve">
+    <value>Czw</value>
+  </data>
+  <data name="today" xml:space="preserve">
+    <value>Dzisiaj</value>
+  </data>
+  <data name="Tue" xml:space="preserve">
+    <value>Wt</value>
+  </data>
   <data name="txt_gallery" xml:space="preserve">
     <value>Kilka fotek z mojej pracy</value>
   </data>
   <data name="txt_top" xml:space="preserve">
     <value>DJ na twoją imprezę!</value>
+  </data>
+  <data name="Wed" xml:space="preserve">
+    <value>Śr</value>
   </data>
 </root>

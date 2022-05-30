@@ -126,8 +126,17 @@
   <data name="contact" xml:space="preserve">
     <value>Contact</value>
   </data>
+  <data name="Deadline busy" xml:space="preserve">
+    <value>Deadline busy</value>
+  </data>
   <data name="description_of_me" xml:space="preserve">
     <value>My name is Bartek, for some time I have been running parties professionally under the pseudonym DJ Site. In addition to running events, I also decorate the room with light. I work with the best equipment, I do not accept substitutes and half measures. If you are looking for a DJ for a party who will provide the right atmosphere for fun and is flexible in terms of musical genres, you've come to the right place.</value>
+  </data>
+  <data name="Free term" xml:space="preserve">
+    <value>Free term</value>
+  </data>
+  <data name="Fri" xml:space="preserve">
+    <value>Fri</value>
   </data>
   <data name="gallery" xml:space="preserve">
     <value>Gallery</value>
@@ -147,6 +156,9 @@
   <data name="lightshow_title" xml:space="preserve">
     <value>Decorating with light</value>
   </data>
+  <data name="Mon" xml:space="preserve">
+    <value>Mon</value>
+  </data>
   <data name="my_offer" xml:space="preserve">
     <value>My offer</value>
   </data>
@@ -162,10 +174,25 @@
   <data name="professionalism" xml:space="preserve">
     <value>DJ Site is professionalism!</value>
   </data>
+  <data name="Sat" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="Thu" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Tue" xml:space="preserve">
+    <value>Tue</value>
+  </data>
   <data name="txt_gallery" xml:space="preserve">
     <value>A few photos from my work</value>
   </data>
   <data name="txt_top" xml:space="preserve">
     <value>DJ for your party!</value>
+  </data>
+  <data name="Wed" xml:space="preserve">
+    <value>Wed</value>
   </data>
 </root>

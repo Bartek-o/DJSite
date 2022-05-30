@@ -184,11 +184,6 @@ footer > div > div > a:hover {
 }
 
 /*Section calendar*/
-#calendar > * {
-    height: 800px;
-    margin: 50px;
-}
-
 .tui-full-calendar-month-dayname-item {
     overflow-y: hidden;
 }
@@ -199,6 +194,66 @@ footer > div > div > a:hover {
 
 .tui-full-calendar-month-guide-block {
     overflow-y: hidden;
+}
+
+#lnb-calendars {
+    display: inline-block;
+    margin: 13px 0 10px 0;
+    padding: 5px;
+}
+
+.lnb-calendars-item {
+    float: left;
+    margin-right: 20px;
+}
+
+#container-range {
+    display: inline-block;
+    margin: 13px 0 10px 0;
+    padding: 5px;
+    float: right;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#container-btn-calendar {
+    margin: 10px 0 10px 0;
+    float: right;
+    padding: 5px;
+}
+
+.btn-calendar {
+    height: 30px;
+    width: 30px;
+    padding: 3px;
+    border-radius: 20px;
+    margin: 0 1px 0 1px;
+    font-weight: bold;
+}
+
+#btn-move-today {
+    padding: 0;
+    font-size: 17px;
+    text-align: center;
+    width: 80px;
+}
+
+#btn-move-prev {
+    background: url(../assets/thin-chevron-arrow-left-blue.svg) no-repeat center content-box, transparent;
+    padding-right: 5px;
+}
+
+#btn-move-next {
+    background: url(../assets/thin-chevron-arrow-right-blue.svg) no-repeat center content-box, transparent;
+    padding-left: 5px;
+}
+
+#btn-move-prev:hover {
+    background: url(../assets/thin-chevron-arrow-left-white.svg) no-repeat center content-box, #0d6efd;
+}
+
+#btn-move-next:hover {
+    background: url(../assets/thin-chevron-arrow-right-white.svg) no-repeat center content-box, #0d6efd;
 }
 
 /*Section contact*/
