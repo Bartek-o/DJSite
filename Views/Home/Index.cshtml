@@ -4,13 +4,8 @@
     ViewData["Title"] = "Home Page";
 }
 
-@*
-- Do płynnego przewijania strony biblioteka moveTo.js albo jquery(to lepsze bo mniej bibliotek do zainstalowania)
-- https://getbootstrap.com/docs/5.1/components/scrollspy/ do pokazywania na navbar które to miejsce strony
-*@
-
 <section id="DJSite">
-    <p>@Localizer["txt_top"]</p>
+    <p class="animation-fade-in">@Localizer["txt_top"]</p>
 </section>
 
 <div id="filler1" class="fill">
@@ -56,21 +51,22 @@
 
 <section id="gallery">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 gx-0">
-        <div class="col"><img src="/assets/g1.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g2.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g3.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g4.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g1.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g2.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g3.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g4.jpg" alt="" /></div>
 
-        <div class="col"><img src="/assets/g5.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g6.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g7.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g8.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g5.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g6.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g7.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g8.jpg" alt="" /></div>
 
-        <div class="col"><img src="/assets/g9.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g10.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g11.jpg" alt="" /></div>
-        <div class="col"><img src="/assets/g12.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g9.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g10.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g11.jpg" alt="" /></div>
+        <div class="col"><img class="gallery-img" src="/assets/g12.jpg" alt="" /></div>
     </div>
+    <div id="gallery-mode"></div>
 </section>
 
 <div class="fill">
@@ -102,7 +98,7 @@
     </div>
 </section>
 
-<section id="contact" class="row row-cols-2 row-cols-md-4 gx-5">
+<section id="contact" class="row row-cols-1 row-cols-lg-2 gx-5">
     <div class="col contact-col">
         <img src="/assets/telephone-round-line-black.svg" alt="" />
         <p>+48 123 456 789</p>
@@ -120,6 +116,7 @@
         <p>djsite@email.com</p>
     </div>
 </section>
+
 
 @section Scripts{
     <script type="text/javascript">

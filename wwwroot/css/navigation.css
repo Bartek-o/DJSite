@@ -1,5 +1,6 @@
 ﻿nav {
     position: absolute;
+    z-index: 1020!important;
 }
 
 .bg-blue {
@@ -19,6 +20,8 @@
 #djsite > img {
     -webkit-transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out;
+    width: 30px;
+    height: 30px;
 }
 
 #djsite:hover > img {
@@ -37,7 +40,7 @@
 #span-djsite {
     width: 70px;
     top: 49px;
-    left: 73px;
+    left: 63px;
 }
 
 #navbar-list > li {
@@ -72,10 +75,14 @@
 
 #navbar-container-mobile {
     display: none;
+    position: fixed;
     flex-grow: 1;
     align-items: center;
     flex-basis: auto;
-    margin-left: 30px;
+    width: 100%;
+    z-index: 1019;
+    left: 0;
+    top: -144px;
 }
 
 #navbar-list {
@@ -88,16 +95,12 @@
 
 #navbar-list-mobile {
     display: flex;
-    position: absolute;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
     background-color: #4f79df;
     width: 100%;
-    left: 0;
-    z-index: 1029;
-    top: -134px;
 }
 
 #navbar-list-mobile > li > a {
@@ -113,20 +116,39 @@
 
 #btn-toggle-nav {
     display: none;
+    overflow: hidden;
 }
 
 .btn-nav-icon {
     background-color: transparent;
     border-color: transparent;
-}
-
-.nav-icon {
     width: 40px;
     height: 40px;
+    padding: 2px;
 }
 
-.nav-icon:hover {
-    background: radial-gradient(#ffffff00 45%, gold 65%, #ffffff00 79%);
+#btn-facebook {
+    background: url(../assets/facebook-round-line-white.svg) no-repeat center content-box;
+}
+
+#btn-instagram {
+    background: url(../assets/instagram-round-line-white.svg) no-repeat center content-box;
+}
+
+#btn-email {
+    background: url(../assets/email-round-line-white.svg) no-repeat center content-box;
+}
+
+#btn-facebook:hover {
+    background: url(../assets/facebook-round-line-gold.svg) no-repeat center content-box, radial-gradient(transparent 60%, #ffd700 65%, transparent 74%) no-repeat;
+}
+
+#btn-instagram:hover {
+    background: url(../assets/instagram-round-line-gold.svg) no-repeat center content-box, radial-gradient(transparent 60%, #ffd700 65%, transparent 74%) no-repeat;
+}
+
+#btn-email:hover {
+    background: url(../assets/email-round-line-gold.svg) no-repeat center content-box, radial-gradient(transparent 60%, #ffd700 65%, transparent 74%) no-repeat;
 }
 
 @media (max-width: 800px) {

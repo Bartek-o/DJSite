@@ -2,14 +2,14 @@
 
 <nav class="navbar navbar-expand-lg fixed-top bg-blue">
     <a id="djsite" class="navbar-brand col-white" href="#DJSite">
-        <img src="~/assets/dj-party-music-white.svg" alt="" width="40" height="40" class="d-inline-block align-text-top mx-3">
+        <img src="~/assets/dj-party-music-white.svg" alt="" class="d-inline-block align-text-top mx-3">
         DJ Site
         <span id="span-djsite" class="span-navbar"></span>
     </a>
     <div id="navbar-container">
       <ul id="navbar-list">
         <li class="nav-item">
-            <a class="nav-link col-white" href="#about-me">@Localizer["about_me"]</a> @*Można dodać "active" do klasy jak jest to aktualna sekcja*@
+            <a class="nav-link col-white" href="#about-me">@Localizer["about_me"]</a>
             <span class="span-navbar"></span>
         </li>
         <li class="nav-item">
@@ -30,15 +30,9 @@
         </li>
       </ul>
     </div>
-    <button class="btn-nav-icon" type="button">
-      <img src="~/assets/facebook-round-line-white.svg" alt="" class="nav-icon">
-    </button>
-    <button class="btn-nav-icon" type="button">
-      <img src="~/assets/instagram-round-line-white.svg" alt="" class="nav-icon">
-    </button>
-    <button class="btn-nav-icon" type="button" style="margin-right: 8px">
-      <img src="~/assets/email-round-line-white.svg" alt="" class="nav-icon">
-    </button>
+    <button id="btn-facebook" class="btn-nav-icon" type="button" onclick="window.location.href='#contact'"></button>
+    <button id="btn-instagram" class="btn-nav-icon" type="button" onclick="window.location.href='#contact'"></button>
+    <button id="btn-email" class="btn-nav-icon" type="button" style="margin-right: 8px" onclick="window.location.href='#contact'"></button>
     <button id="btn-toggle-nav" class="btn-nav-icon" type="button" onclick="mobileMenu()" style="margin-right: 8px">
       <span></span>
       <span></span>
@@ -49,7 +43,7 @@
 <div id="navbar-container-mobile">
     <ul id="navbar-list-mobile">
     <li class="nav-item">
-        <a class="nav-link col-white" href="#about-me">O mnie</a> @*Można dodać "active" do klasy jak jest to aktualna sekcja*@
+        <a class="nav-link col-white" href="#about-me">O mnie</a>
     </li>
     <li class="nav-item">
         <a class="nav-link col-white" href="#offer">Oferta</a>

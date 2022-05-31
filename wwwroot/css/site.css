@@ -133,23 +133,12 @@ footer > div > div > a:hover {
     height: 50px;
     position: absolute;
     transform: rotate(45deg);
-    top: -40px;
+    top: 435px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-}
-
-#offer > div:nth-child(1) > div {
-    background: #171b25;
-}
-
-#offer > div:nth-child(2) > div {
-    background: #2b488c;
-}
-
-#offer > div:nth-child(3) > div {
-    background: #3a6cdf;
+    background: linear-gradient(135deg, white 40%, transparent 40%);
 }
 
 #offer > div > img {
@@ -176,11 +165,32 @@ footer > div > div > a:hover {
 }
 
 /*Section gallery*/
+#gallery > div > div {
+    overflow: hidden;
+}
+
 #gallery > div > div > img {
     height: 300px;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     object-position: center center;
+    transition: transform .2s;
+}
+
+#gallery > div > div > img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#gallery-mode {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1021;
+    width: 100%;
+    height: 100%;
+    background: #000000d6;
 }
 
 /*Section calendar*/
@@ -194,6 +204,7 @@ footer > div > div > a:hover {
 
 .tui-full-calendar-month-guide-block {
     overflow-y: hidden;
+    display: none!important;
 }
 
 #lnb-calendars {
@@ -259,17 +270,25 @@ footer > div > div > a:hover {
 /*Section contact*/
 #contact {
     width: 100%;
-    padding: 50px 0 50px 0;
+    padding: 100px 0 50px 0;
     margin: 0;
 }
 
+#contact > div:nth-child(1){
+    margin-left: 10vw;
+}
+
+#contact > div:nth-child(4) {
+    margin-right: 10vw;
+}
+
 .contact-col {
-    margin: 0 auto;
-    padding: 30px;
+    margin: auto;
+    width: 200px;
 }
 
 .contact-col > img {
-    height: 250px;
+    height: 150px;
     width: 100%;
     object-fit: fill;
 }
@@ -287,8 +306,216 @@ footer > div > div > a:hover {
     }
 }
 
+@media (max-width: 1100px) {
+    #about-me > p:nth-child(1) {
+        width: 500px;
+        font-size: 40px;
+        margin-top: 5rem;
+    }
+
+    #about-me > p:nth-child(2) {
+        width: 500px;
+        font-size: 15px;
+    }
+
+    #contact > div:nth-child(1) {
+        margin-left: 5vw;
+    }
+
+    #contact > div:nth-child(4) {
+        margin-right: 5vw;
+    }
+}
+
 @media (max-width: 991px) {
-    #offer > div > div {
-        background: white !important;
+    #DJSite > p {
+        width: 365px;
+        font-size: 60px;
+    }
+
+    .fill {
+        height: 60px;
+    }
+
+    .fill > p {
+        font-size: 28px;
+        height: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .fill > p > img {
+        height: 49px;
+        margin-left: 40px;
+    }
+
+    #about-me > p:nth-child(1) {
+        width: 400px;
+    }
+
+    #about-me > p:nth-child(2) {
+        width: 400px;
+    }
+
+    #contact {
+        padding-top: 50px;
+    }
+
+    .contact-col {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .contact-col > p {
+        padding-top: 10px;
+    }
+
+}
+
+@media (max-width: 667px) {
+    footer {
+        font-size: 12px;
+    }
+
+    #DJSite > p {
+        width: 265px;
+        font-size: 45px;
+    }
+
+    .fill {
+        height: 50px;
+    }
+
+    .fill > p {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .fill > p > img {
+        height: 39px;
+        margin-left: 20px;
+    }
+
+    #about-me > p:nth-child(1) {
+        width: 300px;
+        font-size: 40px;
+        margin-top: 4rem;
+    }
+
+    #about-me > p:nth-child(2) {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .offer-col > p:nth-child(3) {
+        font-size: 30px;
+    }
+
+    .offer-col > p:nth-child(4) {
+        font-size: 18px;
+        padding-bottom: 40px;
+    }
+
+    .contact-col {
+        width: 45%;
+    }
+
+    #contact > div:nth-child(1) {
+        margin-left: 5%;
+    }
+
+    #contact > div:nth-child(2) {
+        margin-right: 5%;
+    }
+
+    #contact > div:nth-child(3) {
+        margin-left: 5%;
+    }
+
+    #contact > div:nth-child(4) {
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 470px) {
+    #DJSite > p {
+        width: 265px;
+        font-size: 35px;
+    }
+
+    .fill {
+        height: 40px;
+    }
+
+    .fill > p {
+        font-size: 18px;
+        height: 30px;
+    }
+
+    .fill > p > img {
+        height: 30px;
+    }
+
+    #gallery > div > div > img {
+        height: 250px;
+    }
+}
+
+/*Section animations*/
+.animation-fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
