@@ -190,7 +190,39 @@ footer > div > div > a:hover {
     z-index: 1021;
     width: 100%;
     height: 100%;
-    background: #000000d6;
+    background: #000000e6;
+}
+
+#gallery-mode > img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+#gallery-mode > button {
+    position: absolute;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#gallery-mode > button:nth-child(1) {
+    right: 10vw;
+    background: url(../assets/close-line-white.svg) no-repeat center content-box, transparent;
+}
+
+#gallery-mode > button:nth-child(3) {
+    left: 40vw;
+    background: url(../assets/thin-chevron-arrow-left-white.svg) no-repeat center content-box, transparent;
+}
+
+#gallery-mode > button:nth-child(4) {
+    right: 40vw;
+    background: url(../assets/thin-chevron-arrow-right-white.svg) no-repeat center content-box, transparent;
 }
 
 /*Section calendar*/
@@ -299,10 +331,28 @@ footer > div > div > a:hover {
 }
 
 /*Section mobile*/
+@media (min-width: 1500px) {
+    #contact > div:nth-child(1) {
+        margin-left: 25vw;
+    }
+
+    #contact > div:nth-child(4) {
+        margin-right: 25vw;
+    }
+}
+
 @media (min-width: 1300px) {
     #DJSite > p {
         padding-left: 100px;
         left: 1vw;
+    }
+
+    #contact > div:nth-child(1) {
+        margin-left: 19vw;
+    }
+
+    #contact > div:nth-child(4) {
+        margin-right: 19vw;
     }
 }
 

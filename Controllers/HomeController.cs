@@ -8,10 +8,12 @@ namespace DJSite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private IWebHostEnvironment _environment;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment environment)
         {
             _logger = logger;
+            _environment = environment;
         }
 
         public IActionResult Index()
@@ -21,12 +23,32 @@ namespace DJSite.Controllers
 
         public ActionResult ChangeLanguage(string language)
         {
-            //Thread.CurrentThread.CurrentCulture
             Response.Cookies.Append(
-            CookieRequestCultureProvider.DefaultCookieName,
-            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(language)),
-            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) });
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(language)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) });
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetImages()
+        {
+            List<string> images = new();
+            try
+            {
+                string[] imagesPaths;
+                imagesPaths = Directory.GetFiles(_environment.WebRootPath + "\\assets\\gallery\\");
+                foreach (string imagePath in imagesPaths)
+                {
+                    images.Add(imagePath.Substring(imagePath.LastIndexOf('\\') + 1));
+                }
+            }
+            catch (Exception e)
+            {
+                return Json(e);
+            }
+
+            return Json(images);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

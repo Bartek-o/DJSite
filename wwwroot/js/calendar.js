@@ -7,6 +7,8 @@
     setRenderRangeText();
     setEventListener();
 
+    
+
     document.getElementById("btn-move-today").addEventListener("click", function () {
         calendar.today();
         setRenderRangeText();

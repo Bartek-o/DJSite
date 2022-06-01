@@ -50,22 +50,7 @@
 </div>
 
 <section id="gallery">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 gx-0">
-        <div class="col"><img class="gallery-img" src="/assets/g1.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g2.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g3.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g4.jpg" alt="" /></div>
-
-        <div class="col"><img class="gallery-img" src="/assets/g5.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g6.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g7.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g8.jpg" alt="" /></div>
-
-        <div class="col"><img class="gallery-img" src="/assets/g9.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g10.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g11.jpg" alt="" /></div>
-        <div class="col"><img class="gallery-img" src="/assets/g12.jpg" alt="" /></div>
-    </div>
+    <div id="container-gallery" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 gx-0"></div>
     <div id="gallery-mode"></div>
 </section>
 
@@ -120,6 +105,21 @@
 
 @section Scripts{
     <script type="text/javascript">
+
+    function getImages() {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetImages")",
+                success: function(data) {
+                    resolve(data);
+                },
+                error: function(data) {
+                    reject("Error" + data);
+                }
+            })
+        });
+    }
 
     function createCalendar() {
         var $calendar = $('#calendar').tuiCalendar({
