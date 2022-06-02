@@ -1,4 +1,5 @@
-﻿using DJSite.Models;
+﻿using DJSite.Data;
+using DJSite.Models;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -8,11 +9,14 @@ namespace DJSite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DjSiteContext _context;
         private IWebHostEnvironment _environment;
+        
 
-        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment environment)
+       public HomeController(ILogger<HomeController> logger, DjSiteContext context, IWebHostEnvironment environment)
         {
             _logger = logger;
+            _context = context;
             _environment = environment;
         }
 
@@ -21,7 +25,7 @@ namespace DJSite.Controllers
             return View();
         }
 
-        public ActionResult ChangeLanguage(string language)
+        public IActionResult ChangeLanguage(string language)
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
@@ -31,7 +35,7 @@ namespace DJSite.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetImages()
+        public IActionResult GetImages()
         {
             List<string> images = new();
             try
@@ -49,6 +53,14 @@ namespace DJSite.Controllers
             }
 
             return Json(images);
+        }
+
+        [HttpGet]
+        public IActionResult GetAllSchedules()
+        {
+            var schedules = _context.Schedules;
+
+            return Json(schedules);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

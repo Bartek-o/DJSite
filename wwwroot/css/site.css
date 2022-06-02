@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    overflow: overlay; /* dla chrome */
+    /*overflow: overlay;*/ /* dla chrome */
     /*overflow: auto;*/
 }
 
 html::-webkit-scrollbar {
     width: 7px;
+    /*width: 0px;*/
 }
 
 html::-webkit-scrollbar-track {
@@ -86,8 +87,7 @@ footer > div > div > a:hover {
     text-decoration: underline;
     text-underline-position: under;
     height: 50px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding-top: 9px;
 }
 
 .fill > p > img {
@@ -115,7 +115,7 @@ footer > div > div > a:hover {
     width: 700px;
     font-size: 50px;
     font-weight: 900;
-    margin-top: 10rem;
+    padding-top: 10rem;
 }
 
 #about-me > p:nth-child(2) {
@@ -230,9 +230,9 @@ footer > div > div > a:hover {
     overflow-y: hidden;
 }
 
-.tui-full-calendar-month-week-item {
+/*.tui-full-calendar-month-week-item {
     overflow-y: hidden;
-}
+}*/
 
 .tui-full-calendar-month-guide-block {
     overflow-y: hidden;
@@ -254,15 +254,16 @@ footer > div > div > a:hover {
     display: inline-block;
     margin: 13px 0 10px 0;
     padding: 5px;
-    float: right;
     font-size: 17px;
     font-weight: bold;
+    width: 90px;
 }
 
 #container-btn-calendar {
     margin: 10px 0 10px 0;
     float: right;
     padding: 5px;
+    width: 165px;
 }
 
 .btn-calendar {
@@ -360,7 +361,7 @@ footer > div > div > a:hover {
     #about-me > p:nth-child(1) {
         width: 500px;
         font-size: 40px;
-        margin-top: 5rem;
+        padding-top: 5rem;
     }
 
     #about-me > p:nth-child(2) {
@@ -390,8 +391,7 @@ footer > div > div > a:hover {
     .fill > p {
         font-size: 28px;
         height: 50px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        padding-top: 5px;
     }
 
     .fill > p > img {
@@ -449,7 +449,7 @@ footer > div > div > a:hover {
     #about-me > p:nth-child(1) {
         width: 300px;
         font-size: 40px;
-        margin-top: 4rem;
+        padding-top: 4rem;
     }
 
     #about-me > p:nth-child(2) {

@@ -59,11 +59,8 @@
 </div>
 
 <section id="sectionCalendar" class="container">
-    
     <div id="calendar">
         <div class="container">
-            @*<div id="calendarList"></div>*@
-            
             <div id="container-btn-calendar">
                 <button type="button" id="btn-move-prev" class="btn btn-outline-primary btn-calendar"></button>
                 <button type="button" id="btn-move-today" class="btn btn-outline-primary btn-calendar">
@@ -118,6 +115,41 @@
                     reject("Error" + data);
                 }
             })
+        });
+    }
+
+    function getSchedulesFromDataBase(calendar) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetAllSchedules")',
+            success: function (data) {
+                data.forEach(function (schedule) {
+                    var newCalendar = findCalendar(schedule.calendarId);
+                    var newSchedule = {
+                        id: schedule.id.toString(),
+                        category: schedule.isAllDay ? 'allday' : 'time',
+                        isAllDay: schedule.isAllDay,
+                        start: new Date(schedule.startDate + "Z"),
+                        end: new Date(schedule.endDate + "Z"),
+                        color: newCalendar.color,
+                        bgColor: newCalendar.bgColor,
+                        dragBgColor: newCalendar.bgColor,
+                        borderColor: newCalendar.borderColor,
+                        isPrivate: false,
+                        calendarId: schedule.calendarId,
+                    };
+                    calendar.createSchedules([newSchedule]);
+                });
+                /*var schedule1 = calendar.getSchedule('1', '1');
+                console.log(schedule1);
+                var schedule4 = calendar.getSchedule('4', '2');
+                console.log(schedule4);*/
+            },
+            error: function (errorData) {
+                console.log(errorData);
+                /*$('#messageError').html('Nie udało się wczytać wydarzeń.');
+                $('#dataBaseError').modal('show');*/
+            }
         });
     }
 

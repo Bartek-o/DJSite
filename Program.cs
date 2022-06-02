@@ -1,9 +1,14 @@
+using DJSite.Data;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<DjSiteContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Calendar")));
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddLocalization();

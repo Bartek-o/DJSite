@@ -4,10 +4,9 @@
 
     var calendar = createCalendar();
     renderTypeShedules(CalendarList);
+    loadAllSchedules();
     setRenderRangeText();
     setEventListener();
-
-    
 
     document.getElementById("btn-move-today").addEventListener("click", function () {
         calendar.today();
@@ -26,6 +25,11 @@
 
     function setEventListener() {
         $('#lnb-calendars').on('change', onChangeCalendars);
+    }
+
+    function loadAllSchedules() {
+        getSchedulesFromDataBase(calendar);
+        refreshScheduleVisibility();
     }
 
     function setRenderRangeText() {
@@ -89,6 +93,11 @@
         CalendarList.forEach(function (calendarr) {
             calendar.toggleSchedules(calendarr.id, !calendarr.checked, true);
         });
+
+        var schedule1 = calendar.getSchedule('1', '1');
+        console.log(schedule1);
+        var schedule4 = calendar.getSchedule('4', '2');
+        console.log(schedule4);
 
         calendar.render(true);
 
