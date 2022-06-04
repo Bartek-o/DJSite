@@ -9,6 +9,7 @@
 
 .col-white {
     color: white;
+    -webkit-transition: color 0.2s linear;
     transition: color 0.2s linear;
 }
 
@@ -18,13 +19,15 @@
 }
 
 #djsite > img {
-    -webkit-transition: transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     width: 30px;
     height: 30px;
 }
 
 #djsite:hover > img {
+    -webkit-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
     transform: rotate(-60deg);
 }
 
@@ -32,6 +35,7 @@
     position: absolute;
     background: transparent;
     height: 3px;
+    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     border-radius: 20px;
     background-clip: content-box;
@@ -66,9 +70,14 @@
 }
 
 #navbar-container {
+    -webkit-display: flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-grow: 1;
     flex-grow: 1;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-flex-basis: auto;
     flex-basis: auto;
     margin-left: 30px;
 }
@@ -76,8 +85,11 @@
 #navbar-container-mobile {
     display: none;
     position: fixed;
+    -webkit-flex-grow: 1;
     flex-grow: 1;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-flex-basis: auto;
     flex-basis: auto;
     width: 100%;
     z-index: 1019;
@@ -86,7 +98,11 @@
 }
 
 #navbar-list {
+    -webkit-display: flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
     padding-left: 0;
     margin-bottom: 0;
@@ -94,7 +110,11 @@
 }
 
 #navbar-list-mobile {
+    -webkit-display: flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
@@ -157,6 +177,8 @@
     }
 
     #navbar-container-mobile {
+        -webkit-display: flex;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -187,11 +209,15 @@
     }
 
     #btn-toggle-nav.open span:nth-child(1), #btn-toggle-nav.open span:nth-child(3) {
+        -webkit-transform: translate(0px, 0px) rotate(-45deg) scalex(1.1);
+        -ms-transform: translate(0px, 0px) rotate(-45deg) scalex(1.1);
         transform: translate(0px, 0px) rotate(-45deg) scalex(1.1);
         margin: 0;
     }
 
     #btn-toggle-nav.open span:nth-child(2) {
+        -webkit-transform: translate(20px, -2px) scalex(0);
+        -ms-transform: translate(20px, -2px) scalex(0);
         transform: translate(20px, -2px) scalex(0);
         background-color: transparent;
         height: 0px;
@@ -199,6 +225,8 @@
     }
 
     #btn-toggle-nav.open span:nth-child(3) {
+        -webkit-transform: translate(0px, -4px) rotate(45deg) scalex(1.1);
+        -ms-transform: translate(0px, -4px) rotate(45deg) scalex(1.1);
         transform: translate(0px, -4px) rotate(45deg) scalex(1.1);
     }
 }

@@ -120,11 +120,17 @@
   <data name="about_me" xml:space="preserve">
     <value>O mnie</value>
   </data>
+  <data name="accept" xml:space="preserve">
+    <value>Akceptuj wszystko</value>
+  </data>
   <data name="calendar" xml:space="preserve">
     <value>Kalendarz</value>
   </data>
   <data name="contact" xml:space="preserve">
     <value>Kontakt</value>
+  </data>
+  <data name="cookies" xml:space="preserve">
+    <value>Używam plików cookie na mojej stronie internetowej, aby zapewnić Ci najbardziej odpowiednie wrażenia, zapamiętując Twoje preferencje. Klikając „Akceptuj wszystko”, wyrażasz zgodę na użycie WSZYSTKICH plików cookie.</value>
   </data>
   <data name="Deadline busy" xml:space="preserve">
     <value>Zajęty termin</value>

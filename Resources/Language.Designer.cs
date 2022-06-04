@@ -70,6 +70,15 @@ namespace DJSite.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Accept All.
+        /// </summary>
+        public static string accept {
+            get {
+                return ResourceManager.GetString("accept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Calendar.
         /// </summary>
         public static string calendar {
@@ -84,6 +93,15 @@ namespace DJSite.Resources {
         public static string contact {
             get {
                 return ResourceManager.GetString("contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu I use cookies on my website to give you the most relevant experience by remembering your preferences. By clicking &quot;Accept All&quot; you consent to the use of ALL cookies..
+        /// </summary>
+        public static string cookies {
+            get {
+                return ResourceManager.GetString("cookies", resourceCulture);
             }
         }
         
