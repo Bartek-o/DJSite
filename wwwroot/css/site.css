@@ -571,7 +571,7 @@ footer > div > div > a:hover {
     position: fixed;
     width: 100%;
     background: #ddddddf2;
-    bottom: 5vh;
+    bottom: 0;
     text-align: center;
     padding: 10px;
 }
