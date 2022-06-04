@@ -94,11 +94,6 @@
             calendar.toggleSchedules(calendarr.id, !calendarr.checked, true);
         });
 
-        var schedule1 = calendar.getSchedule('1', '1');
-        console.log(schedule1);
-        var schedule4 = calendar.getSchedule('4', '2');
-        console.log(schedule4);
-
         calendar.render(true);
 
         calendarElements.forEach(function (input) {

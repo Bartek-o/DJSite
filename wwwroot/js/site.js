@@ -17,7 +17,6 @@ $(document).ready(function () {
         });
         gallery.innerHTML = html.join('\n');
     }, error => {
-        console.log("ERROR");
         console.log(error);
     });
 });
@@ -44,7 +43,6 @@ $(document).on('click', '.gallery-img', function () {
         imagesList = data;
         setPrevActNextImages();
     }, error => {
-        console.log("ERROR");
         console.log(error);
     });  
 });
@@ -123,4 +121,8 @@ $(document).on('click', '#btn-close', function () {
     enableScrolling();
     var background = document.getElementById('gallery-mode');
     background.style.display = "none";
+});
+
+$(document).on('click', '#btn-cookies', function () {
+    document.getElementById('cookies').style.display = "none";
 });
