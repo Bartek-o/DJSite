@@ -6,5 +6,8 @@
     } else {
         $("#navbar-container-mobile").animate({ top: "-144px" }, 600);
     }
-    
 }
+
+$(document).on('click', '#navbar-list-mobile', function () {
+    mobileMenu();
+});
