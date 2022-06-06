@@ -103,16 +103,48 @@
 @section Scripts{
     <script type="text/javascript">
 
+    function checkAcceptCookies() {
+        $.ajax({
+            type: "GET",
+            url: "@Url.Action("CheckAcceptCookies")",
+            success: function(data) {
+                if (data == true) {
+                    document.getElementById('cookies').style.display = "none";
+                } else {
+                    document.getElementById('cookies').style.display = "block";
+                }
+            },
+            error: function(error) {
+                console.log("Error check cookies" + error);
+            }
+        });
+    }
+
+    function acceptCookies() {
+        return new Promise(function(resolve, reject) {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("AcceptCookies")",
+                success: function(result) {
+                    resolve(result);
+                },
+                error: function(error) {
+                    reject("Error accept cookies" + error);
+                }
+            })
+        });
+    }
+
     function getImages() {
-        return new Promise((resolve, reject) => {
+        return new Promise(function(resolve, reject) {
             $.ajax({
                 type: "GET",
                 url: "@Url.Action("GetImages")",
                 success: function(data) {
                     resolve(data);
                 },
-                error: function(data) {
-                    reject("Error" + data);
+                error: function(error) {
+                    reject("Error load gallery" + error);
                 }
             })
         });
@@ -142,7 +174,7 @@
                 });
             },
             error: function (errorData) {
-                console.log(errorData);
+                console.log("Error load shedules" + errorData);
             }
         });
     }

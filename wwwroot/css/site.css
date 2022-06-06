@@ -433,7 +433,7 @@ footer > div > div > a:hover {
     }
 
     .fill > p {
-        font-size: 20px;
+        font-size: 24px;
         height: 40px;
     }
 
@@ -484,18 +484,14 @@ footer > div > div > a:hover {
 }
 
 @media (max-width: 470px) {
-    #DJSite > p {
-        width: 265px;
-        font-size: 35px;
-    }
 
     .fill {
-        height: 40px;
+        height: 45px;
     }
 
     .fill > p {
-        font-size: 18px;
-        height: 30px;
+        font-size: 20px;
+        height: 45px;
     }
 
     .fill > p > img {
@@ -568,6 +564,7 @@ footer > div > div > a:hover {
 
 /*Section cookies*/
 #cookies {
+    display: none;
     position: fixed;
     width: 100%;
     background: #ddddddf2;

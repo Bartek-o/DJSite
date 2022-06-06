@@ -31,7 +31,34 @@ namespace DJSite.Controllers
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(language)),
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) });
+
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public IActionResult AcceptCookies()
+        {
+            CookieOptions cookieOptions = new CookieOptions()
+            {
+                MaxAge = new TimeSpan(30, 0, 0, 0)
+            };
+
+            Response.Cookies.Append("AcceptCookies", "true", cookieOptions);
+
+            return Json(true);
+        }
+
+        [HttpGet]
+        public IActionResult CheckAcceptCookies()
+        {
+            foreach (var cookie in Request.Cookies)
+            {
+                if (cookie.Key == "AcceptCookies" && cookie.Value == "true")
+                {
+                    return Json(true);
+                }
+            }
+            return Json(false);
         }
 
         [HttpGet]

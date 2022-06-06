@@ -9,15 +9,14 @@ var actualImage = null;
 var nextImage = null;
 
 $(document).ready(function () {
-    getImages().then(data => {
+    checkAcceptCookies();
+    getImages().then(function(data) {
         var gallery = document.getElementById('container-gallery');
         var html = [];
         data.forEach(function (img) {
             html.push('<div class="col"><img class="gallery-img" src="/assets/gallery/' + img + '" alt="" /></div>');
         });
         gallery.innerHTML = html.join('\n');
-    }, error => {
-        console.log(error);
     });
 });
 
@@ -39,17 +38,11 @@ $(document).on('click', '.gallery-img', function () {
 
     actualImage = this.src.substring(this.src.lastIndexOf('/') + 1);
 
-    getImages().then(data => {
+    getImages().then(function(data) {
         imagesList = data;
         setPrevActNextImages();
-    }, error => {
-        console.log(error);
     });  
 });
-
-//$(document).on('click', '#gallery-mode', function () {
-//    this.style.display = "none";
-//});
 
 function setPrevActNextImages() {
     previousImage = null;
@@ -124,5 +117,9 @@ $(document).on('click', '#btn-close', function () {
 });
 
 $(document).on('click', '#btn-cookies', function () {
-    document.getElementById('cookies').style.display = "none";
+    acceptCookies().then(function (result) {
+        if (result == true) {
+            document.getElementById('cookies').style.display = "none";
+        }
+    });
 });
